@@ -1,6 +1,25 @@
 # ECS from Scratch
 Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetup.com/IGDA-DC/events/264926660/)
 
+### Outline
+1. What is an <abbr title="entity-component-system">ECS</abbr> (and <abbr title="data oriented design">DOD</abbr>)
+   - comparison to <abbr title="object oriented programming">OOP</abbr>
+   - entities ("just indexes" - generational indexes)
+   - components (just data - e.g. "primitive" orvalues types)
+   - systems - functions that run on queried (by component) groups of entities
+2. Why use it?
+   - performance
+   - prototyping & rapid iteration
+3. A *very* simple implementation from scratch
+   - JavaScript
+   - no generational indexing (limited to `2^53 - 1` (or `9,007,199,254,740,991`) entities)
+   - no querying/caching, all systems run on all entities (in a "world")
+4. Unity
+   - *very* new (lots of flux - documentation missing or like, immediately out of date)
+   - where to start (no `GameObject`s, no `MonoBehavior`s) - [`RuntimeInitializeOnLoadMethod`](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html)
+   - Pure ECS
+   - Project Tiny
+
 ### Links
 - [Some ideas](https://gist.github.com/mysterycommand/c78c5dc6446dda940d49b36ee6529c45)
 - [keijiro/Voxelman: Unity ECS + C# Job System example](https://github.com/keijiro/Voxelman)
@@ -33,3 +52,5 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
 - [Unity - Scripting API: RuntimeInitializeOnLoadMethodAttribute](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html)
 - [Introduction - EcsRx](https://ecsrx.gitbook.io/project/)
 - [dbartolini/data-oriented-design](https://github.com/dbartolini/data-oriented-design)
+- [Entity-Component System in Unity – a tutorial](https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/05/08/entity-component-system-in-unity-a-tutorial/)
+- [Understanding Component-Entity-Systems](https://www.gamedev.net/articles/programming/general-and-gameplay-programming/understanding-component-entity-systems-r3013)
