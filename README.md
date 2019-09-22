@@ -4,8 +4,8 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
 ### Outline
 1. Who am I?
    - … and why listen to me?
-2. What is an <abbr>ECS</abbr> (and <abbr>DOD</abbr>)
-   - comparison to <abbr>OOP</abbr>
+2. What is an <abbr title="entity-component-system">ECS</abbr> (and <abbr title="data oriented design">DOD</abbr>)
+   - comparison to <abbr title="object oriented programming">OOP</abbr>
    - entities ("just indexes" - generational indexes)
    - components (just data - e.g. "primitive" orvalues types)
    - systems - functions that run on queried (by component) groups of entities
