@@ -2,19 +2,25 @@
 Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetup.com/IGDA-DC/events/264926660/)
 
 ### Outline
-1. What is an <abbr title="entity-component-system">ECS</abbr> (and <abbr title="data oriented design">DOD</abbr>)
-   - comparison to <abbr title="object oriented programming">OOP</abbr>
+1. Who am I?
+   - … and why listen to me?
+2. What is an <abbr title='entity-component-system'>ECS</abbr> (and <abbr title='data oriented design'>DOD</abbr>)
+   - comparison to <abbr title='object oriented programming'>OOP</abbr>
    - entities ("just indexes" - generational indexes)
    - components (just data - e.g. "primitive" orvalues types)
    - systems - functions that run on queried (by component) groups of entities
-2. Why use it?
+   - resources - like "shared components" … usually read only from the perspective of systems
+3. Why use it?
    - performance
    - prototyping & rapid iteration
-3. A *very* simple implementation from scratch
+4. A *very* simple implementation from scratch
    - JavaScript
    - no generational indexing (limited to `2^53 - 1` (or `9,007,199,254,740,991`) entities)
    - no querying/caching, all systems run on all entities (in a "world")
-4. Unity
+   - systems:
+     - activate/deactivate - lifetime
+     - update - fireworks, boids, metaballs, boundaries?, gravity?
+5. Unity
    - *very* new (lots of flux - documentation missing or like, immediately out of date)
    - where to start (no `GameObject`s, no `MonoBehavior`s) - [`RuntimeInitializeOnLoadMethod`](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html)
    - Pure ECS
