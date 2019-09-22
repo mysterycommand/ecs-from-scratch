@@ -1,0 +1,46 @@
+{
+  "name": "ecs-from-scratch",
+  "version": "1.0.0",
+  "description": "Notes and links for my talk \"ECS from Scratch\" for [IGDA DC, Tues. Sept. 24 2019](https://www.meetup.com/IGDA-DC/events/264926660/)",
+  "engines": {
+    "node": "10.16.3",
+    "npm": "6.11.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mysterycommand/ecs-from-scratch.git"
+  },
+  "keywords": [
+    "ecs",
+    "from",
+    "scratch",
+    "igda",
+    "dc",
+    "talk",
+    "notes",
+    "links"
+  ],
+  "author": {
+    "name": "Matt Hayes",
+    "email": "matt@mysterycommand.com",
+    "url": "https://mysterycommand.com"
+  },
+  "license": "(MIT OR Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/mysterycommand/ecs-from-scratch/issues"
+  },
+  "homepage": "https://github.com/mysterycommand/ecs-from-scratch#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
