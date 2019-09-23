@@ -10,11 +10,14 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
    - comparison to <abbr title="object oriented programming">OOP</abbr>
    - entities ("just indexes" - generational indexes)
    - components (just data - e.g. "primitive" or value types)
+   - archetypes - groups of components
    - systems - functions that run on queried (by component) groups of entities
    - resources - like "shared components" … usually read only from the perspective of systems
+   - jobs - scheduling systems that are dependent on other systems (physics, parent/child transforms)
 3. Why use it?
    - performance
    - prototyping & rapid iteration
+   - serializable (and therefore streamable)
 4. A _very_ simple implementation from scratch
    - JavaScript
    - no generational indexing (limited to `2^53 - 1` (or `9,007,199,254,740,991`) entities)
@@ -27,6 +30,10 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
    - where to start (no `GameObject`s, no `MonoBehavior`s) - [`RuntimeInitializeOnLoadMethod`](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html)
    - Pure ECS
    - Project Tiny
+6. Other applications
+   - Effects & shader graphs
+   - Cloud architecture (API as data/components, "functions as a service" as systems)
+   - Intersectional feminism?
 
 ### Links
 
