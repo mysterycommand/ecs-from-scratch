@@ -1,7 +1,9 @@
 # ECS from Scratch
+
 Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetup.com/IGDA-DC/events/264926660/)
 
 ### Outline
+
 1. Who am I?
    - … and why listen to me?
 2. What is an <abbr title="entity-component-system">ECS</abbr> (and <abbr title="data oriented design">DOD</abbr>)
@@ -13,7 +15,7 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
 3. Why use it?
    - performance
    - prototyping & rapid iteration
-4. A *very* simple implementation from scratch
+4. A _very_ simple implementation from scratch
    - JavaScript
    - no generational indexing (limited to `2^53 - 1` (or `9,007,199,254,740,991`) entities)
    - no querying/caching, all systems run on all entities (in a "world")
@@ -21,12 +23,13 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
      - activate/deactivate - lifetime
      - update - fireworks, boids, metaballs, boundaries?, gravity?
 5. Unity
-   - *very* new (lots of flux - documentation missing or like, immediately out of date)
+   - _very_ new (lots of flux - documentation missing or like, immediately out of date)
    - where to start (no `GameObject`s, no `MonoBehavior`s) - [`RuntimeInitializeOnLoadMethod`](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html)
    - Pure ECS
    - Project Tiny
 
 ### Links
+
 - [Some ideas](https://gist.github.com/mysterycommand/c78c5dc6446dda940d49b36ee6529c45)
 - [keijiro/Voxelman: Unity ECS + C# Job System example](https://github.com/keijiro/Voxelman)
 - [EntityComponentSystemSamples/ECSSamples/Documentation at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Documentation)
