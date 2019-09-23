@@ -34,6 +34,8 @@ Notes and links for my talk for [IGDA DC, Tues. Sept. 24 2019](https://www.meetu
    - Effects & shader graphs
    - Cloud architecture (API as data/components, "functions as a service" as systems)
    - Intersectional feminism?
+     > a branch of feminism asserting how different **aspects** of social and political identity discrimination overlap--for example, race with gender. It is a qualitative analytic **framework** that identifies how interlocking **systems** of power affect those who are most marginalized in society.
+     > --[Wikepedia](https://en.wikipedia.org/wiki/Intersectionality) (emphasis mine)
 
 ### Links
 
