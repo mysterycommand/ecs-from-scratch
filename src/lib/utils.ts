@@ -1,7 +1,7 @@
 export const {
   devicePixelRatio: dpr,
   requestAnimationFrame: raf,
-  cancelAnimationFrame: caf
+  cancelAnimationFrame: caf,
 } = window;
 
 interface Listener<T extends keyof HTMLElementEventMap> extends EventListener {
@@ -12,7 +12,7 @@ export function on<T extends EventTarget, U extends keyof HTMLElementEventMap>(
   target: T,
   type: U,
   listener: Listener<U>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ) {
   target.addEventListener(type, listener, options);
 }
@@ -24,11 +24,11 @@ export function once<
   target: T,
   type: U,
   listener: Listener<U>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ) {
   on(target, type, listener, {
-    ...(typeof options === "boolean" ? { capture: options } : options),
-    once: true
+    ...(typeof options === 'boolean' ? { capture: options } : options),
+    once: true,
   });
 }
 
@@ -36,7 +36,7 @@ export function off<T extends EventTarget, U extends keyof HTMLElementEventMap>(
   target: T,
   type: U,
   listener: Listener<U>,
-  options?: boolean | AddEventListenerOptions
+  options?: boolean | AddEventListenerOptions,
 ) {
   target.removeEventListener(type, listener, options);
 }

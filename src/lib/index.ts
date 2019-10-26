@@ -1,1 +1,1 @@
-export { dpr, raf, caf, on, once, off } from "./utils";
+export { dpr, raf, caf, on, once, off } from './utils';
