@@ -71,6 +71,32 @@
 - [UnityTechnologies/SpaceShooterECS: The ECS project originally developed with Intel for GDC 2018](https://github.com/UnityTechnologies/SpaceShooterECS)
 - [UnityTechnologies/ProceduralPatterns2D](https://github.com/UnityTechnologies/ProceduralPatterns2D)
 
+##### [Unite Copenhagen 2019](https://www.youtube.com/playlist?list=PLX2vGYjWbI0RzLRaqsqcgnuc2RvLPTUmi)
+
+- [Converting your game to DOTS - Unite Copenhagen](https://youtu.be/BNMrevfB6Q0)
+  - [slides](https://www.slideshare.net/unity3d/converting-your-game-to-dots-unite-copenhagen-2019)
+- [Converting scene data to DOTS - Unite Copenhagen](https://youtu.be/TdlhTrq1oYk)
+  - [slides](https://www.slideshare.net/unity3d/converting-scene-data-to-dots-unite-copenhagen-2019)
+- [Options for Entity interaction - Unite Copenhagen](https://youtu.be/KuGRkC6wzMY)
+  - [slides](https://www.slideshare.net/unity3d/options-for-entity-interaction-unite-copenhagen-2019)
+  - [`ComponentDataFromEntity<T>`](https://docs.unity3d.com/Packages/com.unity.entities@0.0/api/Unity.Entities.ComponentDataFromEntity-1.html)
+- [Unity ECS for mobile: Metropolis Traffic Simulation - Unite Copenhagen](https://youtu.be/iCnYm7kRC1g)
+- [Unboxing DOTS: Designing workflows for humans - Unite Copenhagen](https://youtu.be/VXuR8VVQzwQ)
+- [Project Tiny overview and roadmap - Unite Copenhagen](https://youtu.be/kNK_niBNkMY)
+  - [a thread on Unity Forums](https://forum.unity.com/threads/wheres-the-project-tiny-package-cant-find-it-in-package-manager.761381/)
+- [Overview of physics in DOTS - Unite Copenhagen](https://youtu.be/tI9QfqQ9ATA)
+- [Getting started with Burst - Unite Copenhagen](https://youtu.be/Tzn-nX9hK1o)
+- [Using Entity Command Buffers - Unite Copenhagen](https://youtu.be/SecJibpoTYw)
+- [Creating a third-person zombie shooter with DOTS - Unite Copenhagen](https://youtu.be/yTGhg905SCs)
+- [Building a turn-based game prototype using ECS - Unite Copenhagen](https://youtu.be/mL4qrt-15TE)
+- [Introduction to the DOTS Sample and the NetCode that drives it - Unite Copenhagen](https://youtu.be/P_-FoJuaYOI)
+- Tangentially related?
+  - [Overview of Unity Simulation - Unite Copenhagen](https://youtu.be/IoF4JemHw2o)
+  - [Understanding the package management ecosystem - Unite Copenhagen](https://youtu.be/22HIEQTyozQ)
+  - [Introducing the new Input System - Unite Copenhagen](https://youtu.be/hw3Gk5PoZ6A)
+
+Also collected (by me) in a single playlist: [Unity DOTS & ECS - Unite Copenhagen 2019](https://www.youtube.com/playlist?list=PLU0pFxOcoc94fVbfEJmpJCkxFhybP4cos)
+
 #### Other implementations
 
 - [Flecs](https://github.com/SanderMertens/flecs) (fast lightweight ECS)
@@ -106,6 +132,15 @@
 - [Game Loop · Sequencing Patterns · Game Programming Patterns](http://gameprogrammingpatterns.com/game-loop.html#play-catch-up)
 - [A Detailed Explanation of JavaScript Game Loops and Timing | Isaac Sukin](https://isaacsukin.com/news/2015/01/detailed-explanation-javascript-game-loops-and-timing#panic-spiral-death)
 - [Understanding Component-Entity-Systems](https://www.gamedev.net/articles/programming/general-and-gameplay-programming/understanding-component-entity-systems-r3013)
+
+#### Some 2D / Sprite stuff:
+- [SpriteSheetRenderer](https://github.com/fabriziospadaro/SpriteSheetRenderer)
+  - A powerful Unity ECS system to render massive numbers of animated sprites using DynamicBuffers and ComputeBuffer
+  - [a thread on Unity Forums](https://forum.unity.com/threads/200k-dynamic-animated-sprites-at-80fps.695809/)
+- [Getting Started with ECS in Unity 2019](https://youtu.be/ILfUuBLfzGI) (Code Monkey)
+- [Draw a Sprite with ECS in Unity 2019](https://youtu.be/6eV9NR3Vb9U) (Code Monkey)
+- [Simple Sprite Sheet Animation in Unity ECS](https://youtu.be/tvi44I_SK3w) (Code Monkey)
+- []() (Code Monkey)
 
 ### Notes
 
