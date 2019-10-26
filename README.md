@@ -12,6 +12,7 @@
    - components (just data - e.g. "primitive" or value types)
    - archetypes - groups of components
    - systems - functions that run on queried (by component) groups of entities
+   - queries - groups of entities with certain sets of components
    - resources - like "shared components" … usually read only from the perspective of systems
    - jobs - scheduling systems that are dependent on other systems (physics, parent/child transforms)
 3. Why use it?
