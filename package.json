@@ -7,7 +7,12 @@
     "npm": "6.12.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf .cache/ dist/",
+    "reset": "npm run clean node_modules/ && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "serve": "npm run build && serve dist/",
+    "build": "parcel build src/index.html --experimental-scope-hoisting"
   },
   "repository": {
     "type": "git",
@@ -36,7 +41,11 @@
   "dependencies": {},
   "devDependencies": {
     "commitizen": "4.0.3",
-    "cz-conventional-changelog": "3.0.2"
+    "cz-conventional-changelog": "3.0.2",
+    "parcel": "1.12.4",
+    "prettier": "1.18.2",
+    "serve": "11.2.0",
+    "typescript": "3.6.4"
   },
   "config": {
     "commitizen": {
