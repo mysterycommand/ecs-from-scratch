@@ -11,8 +11,10 @@
     "reset": "npm run clean node_modules/ && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "serve": "npm run build && serve dist/",
-    "build": "parcel build src/index.html --experimental-scope-hoisting"
+    "serve": "serve dist/",
+    "preserve": "npm run build && serve dist/",
+    "build": "parcel build src/index.html --experimental-scope-hoisting",
+    "prebuild": "rm -rf dist/"
   },
   "repository": {
     "type": "git",
