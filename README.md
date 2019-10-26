@@ -145,6 +145,8 @@ Also collected (by me) in a single playlist: [Unity DOTS & ECS - Unite Copenhage
 
 ### Notes
 
+#### Scratchpad:
+
 ```ts
 const sim = createSim();
 sim.addResource('keyboard' /* do something to init the keyboard */);
@@ -158,6 +160,8 @@ world.registerSystem(query, system); // cache & invalidate queries
 // use a functional style
 // emitters ... a default "is active" component?
 ```
+
+---
 
 #### Options for Entity interaction
 
@@ -288,3 +292,5 @@ ECB is good for writes, stage change, infrequent, timing isn't super critical.
 **When to read, when to write**
 
 Reads via `ComponentDataFromEntity<T>` are high frequency, low cost transformations. Writes via `EntityCommandBuffer` are low frequency, high cost … _and_ express authority.
+
+---
