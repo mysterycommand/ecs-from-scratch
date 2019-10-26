@@ -47,19 +47,28 @@
 
 #### Unity
 
-- [keijiro/Voxelman: Unity ECS + C# Job System example](https://github.com/keijiro/Voxelman)
-- [EntityComponentSystemSamples/ECSSamples/Documentation at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Documentation)
 - [TransformSystem | Package Manager UI website](https://docs.unity3d.com/Packages/com.unity.entities@0.0/manual/transform_system.html)
 - [Scheduling a job from a job - why not? | Package Manager UI website](https://docs.unity3d.com/Packages/com.unity.jobs@0.0/manual/scheduling_a_job_from_a_job.html)
 - [Burst User Guide | Package Manager UI website](https://docs.unity3d.com/Packages/com.unity.burst@1.0/manual/index.html)
-- [Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples)
-- [EntityComponentSystemSamples/resources.md at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/ECSSamples/Documentation/resources.md)
-- [EntityComponentSystemSamples/ecs_principles_and_vision.md at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/ECSSamples/Documentation/ecs_principles_and_vision.md)
-- [EntityComponentSystemSamples/is_ecs_for_you.md at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/ECSSamples/Documentation/is_ecs_for_you.md)
-- [Unity-Technologies/Unity.Mathematics: A prototype of a C# math library providing vector types and math functions with a shader like syntax](https://github.com/Unity-Technologies/Unity.Mathematics)
-- [Project Tiny Preview Package is here! – Unity Blog](https://blogs.unity3d.com/2018/12/05/project-tiny-preview-package-is-here/)
 - [Unity - Scripting API: RuntimeInitializeOnLoadMethodAttribute](https://docs.unity3d.com/ScriptReference/RuntimeInitializeOnLoadMethodAttribute.html)
+- [Project Tiny Preview Package is here! – Unity Blog](https://blogs.unity3d.com/2018/12/05/project-tiny-preview-package-is-here/)
 - [Entity-Component System in Unity – a tutorial](https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/05/08/entity-component-system-in-unity-a-tutorial/)
+
+##### Source code (GitHub)
+
+- [keijiro/Voxelman: Unity ECS + C# Job System example](https://github.com/keijiro/Voxelman)
+- [Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples)
+  - [EntityComponentSystemSamples/ECSSamples/Documentation at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/tree/master/ECSSamples/Documentation)
+  - [EntityComponentSystemSamples/resources.md at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/ECSSamples/Documentation/resources.md)
+  - [EntityComponentSystemSamples/ecs_principles_and_vision.md at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/ECSSamples/Documentation/ecs_principles_and_vision.md)
+  - [EntityComponentSystemSamples/is_ecs_for_you.md at master · Unity-Technologies/EntityComponentSystemSamples](https://github.com/Unity-Technologies/EntityComponentSystemSamples/blob/master/ECSSamples/Documentation/is_ecs_for_you.md)
+- [Unity-Technologies/Unity.Mathematics: A prototype of a C# math library providing vector types and math functions with a shader like syntax](https://github.com/Unity-Technologies/Unity.Mathematics)
+- [Unity-Technologies/DOTS-Shmup3D-sample: A demo with Unity DOTS and Unity Physics.](https://github.com/Unity-Technologies/DOTS-Shmup3D-sample)
+- [Unity-Technologies/UnityCsReference: Unity C# reference source code](https://github.com/Unity-Technologies/UnityCsReference)
+- [Unity-Technologies/unite2019-scenedatatodots: Unite 2019 - Converting Scene Data to DOTS (samples)](https://github.com/Unity-Technologies/unite2019-scenedatatodots)
+- [UnityTechnologies/AngryBots_ECS: The DOTS project used for the presentation Converting Your Game to DOTS](https://github.com/unitytechnologies/angrybots_ecs)
+- [UnityTechnologies/SpaceShooterECS: The ECS project originally developed with Intel for GDC 2018](https://github.com/UnityTechnologies/SpaceShooterECS)
+- [UnityTechnologies/ProceduralPatterns2D](https://github.com/UnityTechnologies/ProceduralPatterns2D)
 
 #### Other implementations
 
