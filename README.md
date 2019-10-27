@@ -294,3 +294,78 @@ ECB is good for writes, stage change, infrequent, timing isn't super critical.
 Reads via `ComponentDataFromEntity<T>` are high frequency, low cost transformations. Writes via `EntityCommandBuffer` are low frequency, high cost … _and_ express authority.
 
 ---
+
+#### Project Tiny overview and roadmap
+
+Project Tiny update, overview, & roadmap:
+
+- A new highly-modular runtime to produce smal, light, and fast games/experiences
+  - Complete control over size
+    - Beat long load times with a small runtime size that loads content fast
+  - Scalable performance
+    - Deliver fast game-play performance on a broad range of devices
+  - Robust editor experience
+    - Unity's familiar, easy-to-use developer tools speed up production
+
+Project Tiny Timeline:
+
+- Q4 2018 - Project Tiny First Preview
+  - WebGL & 2D
+  - Feedback:
+    - Learning DOTS is too hard
+    - TypeScript is bad
+    - Steep learning curve!
+- Q2 2019 - C# (preview)
+  - Powered by DOTS Runtime for real
+  - Feedback:
+    - Authoring content needs to align with Unity (no "Pure DOTS")
+- Q3 2019 - Today!
+  - 2D + Lightweight/HTML5 export is great, but needs 3D & native/mobile
+
+Project Tiny's focus for next previews:
+
+- 3D & 2D "Hyper-Casual" Games (native mobile)
+- Playable Ads (HTML5, MRAID & IAB compliance)
+- Instant, Social/Messenger ("Web View" games)
+
+Project Tiny's three phases:
+
+| Authoring                                   | Converting                                 | Running                        |
+| ------------------------------------------- | ------------------------------------------ | ------------------------------ |
+| Familiar Unity Editor experience            | Converters for built-in components         | Optimal runtime representation |
+| GameObjects, Materials, Meshrenderers, etc. | Custom conversion code for your components |                                |
+| DOTS gameplay code                          | ->                                         | Runtime gameplay code          |
+
+Two runtimes: Unity & DOTS
+
+TinyRacing (coming soon)
+
+- uses URP, Prefabs, ets
+- Conversion pipeline
+- Uses DOTS runtime hybrid renderer to play in editor
+- Uses DOTS runtime tiny renderer (alpha)
+- Build configurations enable multi-targeting
+- Pipeline control, split on everything, build slices, down-target for performance/features
+
+Project Tiny is built _on top of_ of the DOTS Runtime and other components:
+
+- DOTS Runtime
+- DOTS Core
+- DOTS 2D
+- Tiny 3D Renderer
+- DOTS Authoring/Conversion pipeline
+- DOTS/RT Animation
+- Platform Support
+- AR, Audio, etc. coming soon!
+
+All of these are shipped as separate packages. Available in a month or two. Tiny Racing is the "vertical slice" they're working on
+
+2020 (and beyond)
+
+- 3D 1st preview in Q4 2019
+- 2D, 3D, AR (all together) previews
+- Start learning DOTS now to get a head start on Tiny
+
+footnote: [Project Tiny's been removed from the package manager until this stuff comes true](https://forum.unity.com/threads/wheres-the-project-tiny-package-cant-find-it-in-package-manager.761381/)
+
+---
