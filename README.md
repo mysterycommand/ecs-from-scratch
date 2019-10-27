@@ -87,8 +87,10 @@
 - [ ] [Overview of physics in DOTS - Unite Copenhagen](https://youtu.be/tI9QfqQ9ATA)
 - [ ] [Getting started with Burst - Unite Copenhagen](https://youtu.be/Tzn-nX9hK1o)
 - [ ] [Using Entity Command Buffers - Unite Copenhagen](https://youtu.be/SecJibpoTYw)
-- [ ] [Creating a third-person zombie shooter with DOTS - Unite Copenhagen](https://youtu.be/yTGhg905SCs)
-- [ ] [Building a turn-based game prototype using ECS - Unite Copenhagen](https://youtu.be/mL4qrt-15TE)
+- [x] [Creating a third-person zombie shooter with DOTS - Unite Copenhagen](https://youtu.be/yTGhg905SCs)
+  - [slides](https://www.slideshare.net/unity3d/creating-a-thirdperson-zombie-horde-shooter-using-dots-unite-copenhagen)
+- [x] [Building a turn-based game prototype using ECS - Unite Copenhagen](https://youtu.be/mL4qrt-15TE)
+  - [slides](https://www.slideshare.net/unity3d/building-a-turnbased-game-prototype-using-ecs-unite-copenhagen-2019)
 - [ ] [Introduction to the DOTS Sample and the NetCode that drives it - Unite Copenhagen](https://youtu.be/P_-FoJuaYOI)
 - Tangentially related?
   - [ ] [Overview of Unity Simulation - Unite Copenhagen](https://youtu.be/IoF4JemHw2o)
