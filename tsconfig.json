@@ -6,6 +6,7 @@
     "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "isolatedModules": true,
+    "noEmit": true,
 
     /* Strict Type-Checking Options */
     "strict": true,
