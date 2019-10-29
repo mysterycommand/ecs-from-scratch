@@ -25,7 +25,7 @@ Identify number and frequency of updates (cost). In this example, probably once 
 [BurstCompile]
 struct FollowLeaderJob : IJobForEach<Leader, Position, Velocity>
 {
-  [ReadOnly] public ComponentDataFromEntity<Postion> PositionData;
+  [ReadOnly] public ComponentDataFromEntity<Position> PositionData;
 
   public void Execute([ReadOnly] ref Leader leader, [ReadOnly] ref Position position, ref Velocity velocity)
   {
@@ -47,7 +47,7 @@ protected override JobeHandle OnUpdate(JobHandle inputDependencies)
 {
   return new FollowLeaderJob()
   {
-    PositionData = GetComponentDataFromEntity<Posiition>(true /* for [ReadOnly] */)
+    PositionData = GetComponentDataFromEntity<Position>(true /* for [ReadOnly] */)
   }.Schedule(this, inputDependencies);
 }
 ```
@@ -109,7 +109,7 @@ protected override JobHandle OnUpdate(JobHandle inputDependencies)
 ```cs
 // Runs in InitializationSystemGroup
 [BurstCompile][RequireComponentTag(typeof(Tag_Button))]
-struct ActivateButtonJob : IJobForEachWithEntity<NouseClicked>
+struct ActivateButtonJob : IJobForEachWithEntity<MouseClicked>
 {
   public EntityCommandBuffer.Concurrent ECBSimulationBegin;
   public EntityCommandBuffer.Concurrent ECBSimulationEnd;
