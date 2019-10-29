@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "Notes and links for my talk \"ECS from Scratch\" for [IGDA DC, Tues. Sept. 24 2019](https://www.meetup.com/IGDA-DC/events/264926660/)",
   "engines": {
-    "node": "10.16.3",
-    "npm": "6.11.3"
+    "node": "12.13.0",
+    "npm": "6.12.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf .cache/ dist/",
+    "reset": "npm run clean node_modules/ && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "serve": "serve dist/",
+    "preserve": "npm run build && serve dist/",
+    "build": "parcel build src/index.html --experimental-scope-hoisting",
+    "prebuild": "rm -rf dist/"
   },
   "repository": {
     "type": "git",
@@ -35,8 +42,15 @@
   "homepage": "https://github.com/mysterycommand/ecs-from-scratch#readme",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "7.6.4",
+    "@babel/preset-env": "7.6.3",
+    "@babel/preset-typescript": "7.6.0",
     "commitizen": "4.0.3",
-    "cz-conventional-changelog": "3.0.2"
+    "cz-conventional-changelog": "3.0.2",
+    "parcel": "1.12.4",
+    "prettier": "1.18.2",
+    "serve": "11.2.0",
+    "typescript": "3.6.4"
   },
   "config": {
     "commitizen": {
