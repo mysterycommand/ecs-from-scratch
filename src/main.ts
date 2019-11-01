@@ -1,46 +1,43 @@
 import './main.css';
 import { on } from './lib';
 
+let cursor = 0;
+const entities: number[] = [];
+
+function createEntity() {
+  if (entities[cursor] === undefined) {
+    entities[cursor] = entities.length;
+  }
+
+  cursor++;
+}
+
+function createEntities(count: number) {
+  for (let i = 0; i < count; ++i) {
+    createEntity();
+  }
+}
+
+function removeEntityAt(index: number) {
+  const lastIndex = cursor - 1;
+  const entity = entities[index];
+  const lastEntity = entities[lastIndex];
+
+  entities[index] = lastEntity;
+  entities[lastIndex] = entity;
+  cursor--;
+}
+
+function removeEntity(entity: number) {
+  const index = entities.indexOf(entity);
+  removeEntityAt(index);
+}
+
 on(window, 'load', () => {
-  const stripComments = /(?:(?:\/\/.*$)|(?:\/\*[\s\S]*?\*\/))/gm;
-  const endOfArguments = /\ =>|\ \{/;
-  const emptySpace = /\n*\s*/gm;
-
-  [
-    (foo: { value: number }) => {
-      foo.value -= 1;
-    },
-    ([bar, baz /* , qux */, plz]: { value: number }[]) => {
-      // hi
-      /**
-       * hello
-       */
-      bar.value += baz.value;
-      baz.value += plz.value;
-    },
-    function hello(hi: any /* how are you? */) {
-      // good?
-      console.log(hi);
-    },
-    function({ target, currentTarget }: Event) {
-      console.log(target, currentTarget);
-    },
-    function({ target, touches: [{ screenX, screenY }] }: TouchEvent) {
-      console.log(target, screenX, screenY);
-    },
-    function([{ a, b }]: { a: any; b: any }[]) {
-      console.log(a, b);
-    },
-  ].forEach((fn: Function) => {
-    const functionString = fn
-      .toString()
-      .replace(stripComments, '')
-      .replace(`function ${fn.name}`, '');
-    const { index } = functionString.match(endOfArguments) || { index: 0 };
-    const argumentsString = functionString
-      .slice(0, index)
-      .replace(emptySpace, '');
-
-    console.log(argumentsString);
-  });
+  createEntities(4);
+  removeEntity(0);
+  removeEntity(2);
+  createEntities(3);
+  createEntity();
+  console.log(entities);
 });
