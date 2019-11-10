@@ -1,43 +1,65 @@
 import './main.css';
 import { on } from './lib';
 
-let cursor = 0;
-const entities: number[] = [];
+function createPool(
+  initialSize = 0,
+): [Iterable<number>, (count?: number) => void, (index: number) => void] {
+  let cursor = 0;
+  const entities = Array(initialSize)
+    .fill(0)
+    .map((_, i) => i);
 
-function createEntity() {
-  if (entities[cursor] === undefined) {
-    entities[cursor] = entities.length;
+  function request(count = 1) {
+    for (let i = 0; i < count; ++i) {
+      if (entities[cursor] === undefined) {
+        entities[cursor] = entities.length;
+      }
+
+      ++cursor;
+    }
   }
 
-  cursor++;
-}
+  function restore(entity: number) {
+    if (!entities.includes(entity)) {
+      throw new Error(`tried to restore entity: ${entity}, it doesn't exist`);
+    }
 
-function createEntities(count: number) {
-  for (let i = 0; i < count; ++i) {
-    createEntity();
+    const i = entities.indexOf(entity);
+
+    if (entity >= cursor) {
+      throw new Error(
+        `tried to restore entity: ${entity}, it's already restored`,
+      );
+    }
+
+    const j = cursor - 1;
+    [entities[i], entities[j]] = [entities[j], entities[i]];
+    --cursor;
   }
-}
 
-function removeEntityAt(index: number) {
-  const lastIndex = cursor - 1;
-  const entity = entities[index];
-  const lastEntity = entities[lastIndex];
-
-  entities[index] = lastEntity;
-  entities[lastIndex] = entity;
-  cursor--;
-}
-
-function removeEntity(entity: number) {
-  const index = entities.indexOf(entity);
-  removeEntityAt(index);
+  return [
+    {
+      *[Symbol.iterator]() {
+        let i = 0;
+        while (i < cursor) {
+          yield entities[i];
+          ++i;
+        }
+      },
+    },
+    request,
+    restore,
+  ];
 }
 
 on(window, 'load', () => {
-  createEntities(4);
-  removeEntity(0);
-  removeEntity(2);
-  createEntities(3);
-  createEntity();
-  console.log(entities);
+  const [indices, request, restore] = createPool();
+  request(4);
+  restore(0);
+  restore(2);
+  request(3);
+  request();
+  restore(5);
+  restore(4);
+  console.log([...indices]);
 });
