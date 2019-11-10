@@ -1,10 +1,10 @@
 {
   "name": "ecs-from-scratch",
   "version": "1.0.0",
-  "description": "Notes and links for my talk \"ECS from Scratch\" for [IGDA DC, Tues. Sept. 24 2019](https://www.meetup.com/IGDA-DC/events/264926660/)",
+  "description": "Notes and links for my talk for [IGDA DC, Tues. Oct 29, 2019](https://www.meetup.com/IGDA-DC/events/265101365/). [Slides on Projector](http://bit.ly/ecs-from-scratch).",
   "engines": {
     "node": "12.13.0",
-    "npm": "6.12.0"
+    "npm": "6.13.0"
   },
   "scripts": {
     "clean": "rm -rf .cache/ dist/",
@@ -42,15 +42,15 @@
   "homepage": "https://github.com/mysterycommand/ecs-from-scratch#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.6.4",
-    "@babel/preset-env": "7.6.3",
-    "@babel/preset-typescript": "7.6.0",
+    "@babel/core": "7.7.2",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-typescript": "7.7.2",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "parcel": "1.12.4",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "serve": "11.2.0",
-    "typescript": "3.6.4"
+    "typescript": "3.7.2"
   },
   "config": {
     "commitizen": {
