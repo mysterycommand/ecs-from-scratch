@@ -1,22 +1,35 @@
+interface EntityPool<T> extends Iterable<T> {
+  readonly currentSize: number;
+  readonly totalSize: number;
+}
+
 export function createEntityPool(
   initialSize = 0,
-): [Iterable<number>, (count?: number) => void, (index: number) => void] {
+): [
+  EntityPool<number>,
+  (count?: number) => number[],
+  (restored: number | number[]) => void,
+] {
   let cursor = 0;
   const entities = Array(initialSize)
     .fill(0)
     .map((_, i) => i);
 
-  function request(count = 1) {
-    for (let i = 0; i < count; ++i) {
-      if (entities[cursor] === undefined) {
-        entities[cursor] = entities.length;
-      }
-
-      ++cursor;
+  function requestOne() {
+    if (entities[cursor] === undefined) {
+      entities[cursor] = entities.length;
     }
+
+    return entities[cursor++];
   }
 
-  function restore(entity: number) {
+  function request(count = 1) {
+    return Array(count)
+      .fill(0)
+      .map(requestOne);
+  }
+
+  function restoreOne(entity: number) {
     if (!entities.includes(entity)) {
       throw new Error(`tried to restore entity: ${entity}, it doesn't exist`);
     }
@@ -34,6 +47,14 @@ export function createEntityPool(
     --cursor;
   }
 
+  function restore(restored: number | number[]) {
+    Array.isArray(restored)
+      ? restored.forEach(restoreOne)
+      : restoreOne(restored);
+  }
+
+  new Set();
+
   return [
     {
       *[Symbol.iterator]() {
@@ -42,6 +63,12 @@ export function createEntityPool(
           yield entities[i];
           ++i;
         }
+      },
+      get currentSize() {
+        return cursor;
+      },
+      get totalSize() {
+        return entities.length;
       },
     },
     request,
