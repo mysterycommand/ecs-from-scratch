@@ -12,4 +12,5 @@ module.exports = {
     ],
     '@babel/typescript',
   ],
+  plugins: ['@babel/syntax-optional-chaining'],
 };
