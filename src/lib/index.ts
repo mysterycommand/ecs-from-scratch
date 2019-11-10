@@ -1,1 +1,2 @@
-export { dpr, raf, caf, on, once, off } from './utils';
+export * from './utils';
+export { createEntityPool } from './createEntityPool';
