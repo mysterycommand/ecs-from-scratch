@@ -115,4 +115,4 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Unity auto-generated
-Unity/*/.vscode
+.vscode
