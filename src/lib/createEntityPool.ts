@@ -36,7 +36,7 @@ export function createEntityPool(
 
     const i = entities.indexOf(entity);
 
-    if (entity >= cursor) {
+    if (entity > cursor) {
       throw new Error(
         `tried to restore entity: ${entity}, it's already restored`,
       );
